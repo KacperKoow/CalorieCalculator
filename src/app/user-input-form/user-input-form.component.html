@@ -1,1 +1,14 @@
-<p>user-input-form</p>
+<form (ngSubmit)="onSubmit()">
+  <label for="body-weight">Body weight</label>
+  <input
+    id="body-weight"
+    name="body-weight"
+    type="number"
+    [(ngModel)]="enteredBodyWeight"
+  />
+  <p>Activity level:</p>
+  <p>What are your primary nutritional goals:</p>
+  <p>Gain weight</p>
+  <p>Lose weight</p>
+  <button>Calculate</button>
+</form>

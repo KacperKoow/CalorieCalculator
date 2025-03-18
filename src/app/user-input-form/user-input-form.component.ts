@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-user-input-form',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './user-input-form.component.html',
-  styleUrl: './user-input-form.component.scss'
+  styleUrl: './user-input-form.component.scss',
 })
 export class UserInputFormComponent {
+  enteredBodyWeight = signal('');
 
+  onSubmit() {}
 }

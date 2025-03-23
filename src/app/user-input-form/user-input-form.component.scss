@@ -1,0 +1,36 @@
+form {
+  text-align: center;
+  margin: auto;
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+  margin: 0 0 1rem;
+}
+
+input,
+select {
+  border: none;
+  background-color: #c3b3d8;
+  height: 2.2rem;
+  width: 12rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+button {
+  background: #c3b3d8;
+  border: none;
+  color: #450d80;
+  padding: 12px 52px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

@@ -1,14 +1,22 @@
-<form (ngSubmit)="onSubmit()">
-  <label for="body-weight">Body weight</label>
-  <input
-    id="body-weight"
-    name="body-weight"
-    type="number"
-    [(ngModel)]="enteredBodyWeight"
-  />
-  <p>Activity level:</p>
-  <p>What are your primary nutritional goals:</p>
-  <p>Gain weight</p>
-  <p>Lose weight</p>
+<form (ngSubmit)="onSubmit(bodyWeight.value, activityLevel.value, goal.value)">
+  <div>
+    <label for="body-weight">Body weight:</label>
+    <input id="body-weight" name="body-weight" type="number" #bodyWeight />
+  </div>
+  <div>
+    <p>Activity level:</p>
+    <select name="activity-level" id="activity-level" #activityLevel>
+      <option value="low">Low Activity</option>
+      <option value="moderate" selected>Moderate Activity</option>
+      <option value="high">High Activity</option>
+    </select>
+  </div>
+  <div>
+    <p>What are your primary nutritional goals:</p>
+    <select name="nutritional-goal" id="nutritional-goal" #goal>
+      <option value="gain">Gain weight</option>
+      <option value="lose" selected>Lose weight</option>
+    </select>
+  </div>
   <button>Calculate</button>
 </form>

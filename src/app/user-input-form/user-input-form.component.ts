@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CalorieCalculatorService } from '../calorie-calculator.service';
 
 @Component({
   selector: 'app-user-input-form',
@@ -9,7 +10,13 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './user-input-form.component.scss',
 })
 export class UserInputFormComponent {
-  enteredBodyWeight = signal('');
+  private calorieCalculatorService = inject(CalorieCalculatorService);
 
-  onSubmit() {}
+  onSubmit(bodyWeight: string, activityLevel: string, goal: string) {
+    this.calorieCalculatorService.calculateCalories({
+      bodyWeight,
+      activityLevel,
+      goal,
+    });
+  }
 }

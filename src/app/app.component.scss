@@ -3,6 +3,6 @@ main {
   max-width: 90rem;
   margin: 2.5rem auto;
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: 3fr 2fr;
   gap: 2.5rem;
 }

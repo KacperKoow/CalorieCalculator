@@ -1,4 +1,6 @@
-<h2>Calories:</h2>
-<p>Proteins:</p>
-<p>Carbohydrates:</p>
-<p>Fats:</p>
+<h2>Calories: {{ data()?.calories }}kcal</h2>
+<p>Proteins: {{ data()?.minProteins }}-{{ data()?.maxProteins }}g</p>
+<p>
+  Carbohydrates: {{ data()?.minCarbohydrates }}-{{ data()?.maxCarbohydrates }}g
+</p>
+<p>Fats: {{ data()?.minFats }}-{{ data()?.maxFats }}g</p>

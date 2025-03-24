@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { CalorieCalculatorService } from '../calorie-calculator.service';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-nutrition-results',
   standalone: true,
-  imports: [],
+  imports: [DecimalPipe],
   templateUrl: './nutrition-results.component.html',
   styleUrl: './nutrition-results.component.scss',
 })

@@ -1,6 +1,29 @@
-<h2>Calories: {{ data()?.calories }}kcal</h2>
-<p>Proteins: {{ data()?.minProteins }}-{{ data()?.maxProteins }}g</p>
-<p>
-  Carbohydrates: {{ data()?.minCarbohydrates }}-{{ data()?.maxCarbohydrates }}g
-</p>
-<p>Fats: {{ data()?.minFats }}-{{ data()?.maxFats }}g</p>
+<div class="wrapper">
+  <div>
+    <h2>Calories:</h2>
+    <p>Proteins:</p>
+    <p>Carbohydrates:</p>
+    <p>Fats:</p>
+  </div>
+
+  <div class="secend">
+    @if (data()) {
+    <h2>{{ data()?.calories | number : "1.0-0" }}kcal</h2>
+    <p>
+      {{ data()?.minProteins | number : "1.0-0" }}-{{
+        data()?.maxProteins | number : "1.0-0"
+      }}g
+    </p>
+    <p>
+      {{ data()?.minCarbohydrates | number : "1.0-0" }}-{{
+        data()?.maxCarbohydrates | number : "1.0-0"
+      }}g
+    </p>
+    <p>
+      {{ data()?.minFats | number : "1.0-0" }}-{{
+        data()?.maxFats | number : "1.0-0"
+      }}g
+    </p>
+    }
+  </div>
+</div>
